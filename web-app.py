@@ -48,7 +48,7 @@ if submit:
     
         hasil_prediksi = pd.DataFrame({
             "penyakit": PENYAKIT,
-            "risiko": ["rendah", "rendah", "rendah"]  # sementara ini dulu aja buat demo, nanti bikin list benerannya pas model udah fix
+            "risiko": ["rendah", "tinggi", "tinggi"]  # sementara ini dulu aja buat demo, nanti bikin list benerannya pas model udah fix
         })
 
         # Filter berdasarkan nilai risiko
