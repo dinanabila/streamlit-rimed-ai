@@ -1,8 +1,6 @@
 import streamlit as st
 import pandas as pd
 import joblib
-from sklearn.preprocessing import MinMaxScaler
-
 
 # List nama fitur yang digunakan untuk melatih model
 KOLOM_STROKE = ["Age", "Gender", "SES", "Hypertension", "Heart_Disease", "BMI", "Avg_Glucose", "Diabetes", "Smoking_Status"]
@@ -131,7 +129,7 @@ if submit:
             errors.append(f"**{desc}** belum dipilih. Silahkan pilih terlebih dahulu.")
 
     for variable, desc in numeric_variables:
-        if age == 0:
+        if variable == 0:
             errors.append(f"**{desc}** belum diisi. Silahkan isi terlebih dahulu.")
 
     if age > 120:
@@ -140,7 +138,7 @@ if submit:
     if body_weight > 300:
         errors.append("**Berat badan** melewati batas wajar. Mohon periksa kembali.")
     
-    if body_weight > 300:
+    if body_height > 300:
         errors.append("**Tinggi badan** melewati batas wajar. Mohon periksa kembali.")
 
     if errors:
